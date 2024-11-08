@@ -6,11 +6,16 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './data/editora.db3'
+      host: 'localhost',  
+      user: 'postgres',  
+      password: 'cidadao', 
+      database: 'controle_livros'   
     },
-    useNullAsDefault: true,
+    seeds: {
+      directory: './data/seeds'
+    }
   },
 
   staging: {
